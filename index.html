@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html lang="en"></html>
+<!--  Website Dev test 1  -->
+<!--  ![tab] regenerates code in new attached file -->
+<html>
+
+<head>
+    <title>Text Animation</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="biography,engineering,computer science">
+    <meta name="author" content="Max Maehara">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="30">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Titillium+Web&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab&family=Titillium+Web&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Press+Start+2P&family=Roboto+Slab&family=Titillium+Web&display=swap" rel="stylesheet">
+
+</head>
+
+<!--Below naviagtion bar "<a href="https://www.punahou.edu/" target="_blank"><img class="" src="Images/puns.png" alt="logo" height="33"></a>"-->
+<body>
+    <header>
+        <a href="https://www.punahou.edu/" style="margin-right: auto;cursor: pointer;"><img class="logo" src="Images/puns.png" alt="logo" height="38"></a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="index.html">.Home()</a></li>
+                <li><a href="projects.html">.Projects()</a></li>
+                <li><a href="mailto: mmaehara25@punahou.edu">.Email()</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!--  Hacker intro effect start -->
+<h1 data-value="MAX MAEHARA">MAX MAEHARA</h1>
+<!--  Hacker intro effect end -->
+
+<!-- Type writer effect start-->
+<div class="text">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+</div>
+
+<style>
+    .text {
+        font-family: 'Courier Prime', monospace;
+        color: rgb(96, 46, 224);
+        font-weight: 500;
+        line-height: 1.5;
+        padding: 1em;
+    }
+
+    .line {
+        display: block;
+        max-width: 500px; /* Set the maximum width for each line here */
+    }
+    .line1 {
+        display: block;
+        max-width: 8000px;
+    }
+</style>
+
+<script>
+    const lines = document.querySelectorAll(".line");
+    const texts = [
+        '<title> Max Portfolio </title>', 
+        'Name = Maximus Toshiyuki Maehara', 
+        'Location = Punahou School', 
+        'function DateOfBirth(05,18,07);',
+        'if accepted into college return (smiley_face) else return (sad_face);',
+        'Sports = "Jiujitsu, Boxing, Wrestling Judo"',
+        "Hobbies = 'surfing, martial arts, programming, engineering'",
+        "Major_Interests= 'Computer Science, Electrical Engineering",
+        "Graduate Year = 2025",
+        "Favorite Food = 'Sushi'",
+        "Age = 16",
+        "Instrument = 'Piano'",
+        "Commitment = 100%",
+        "Adaptability = 100%",
+        "Self_Taught = 'HTMLS, CSS, JAVASCRIPT, PYTHON'",
+        "Career_Goals = 'Build a successful company through my engineering and programming prowess.'",
+        "GPA = 3.7",
+        "Planned_AP_Courses = 4",
+        "Ethnic_Makeup = (50%, 'European', 50%, 'Japanese')",
+        "<-- Enjoy :)"
+        
+        
+        
+    ]; // Array of lines
+
+    function textTypingEffect(elements, texts) {
+        elements.forEach((element, index) => {
+            let lineTexts = texts[index].split('\n'); // Split the text by line breaks
+
+            function typeLine(lineIndex) {
+                let text = lineTexts[lineIndex];
+                let i = 0;
+                let interval = setInterval(() => {
+                    if (i < text.length) {
+                        element.textContent += text[i++];
+                    } else {
+                        clearInterval(interval);
+                        if (lineIndex < lineTexts.length - 1) {
+                            element.innerHTML += '<br>'; // Add line break after completing the line
+                            typeLine(lineIndex + 1); // Continue typing next line
+                        }
+                    }
+                }, 50);
+            }
+
+            typeLine(0); // Start typing the first line
+        });
+    }
+
+    textTypingEffect(lines, texts);
+</script>
+<!-- Type writer effect end-->
+
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

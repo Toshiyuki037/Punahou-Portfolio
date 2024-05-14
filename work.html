@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en"></html>
+<!--  Website Dev test 1  -->
+<!--  ![tab] regenerates code in new attached file -->
+<html lang="en">
+<head>
+    <title>Text Animation</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="biography,engineering,computer science">
+    <meta name="author" content="Max Maehara">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="text"></div>
+    <script>
+        const div = document.querySelector(".text");
+        const text = 'this is the example text';
+
+        function textTypingEffect(element, text, i = 0) {
+            if (i === 0) {
+                element.textContent = "";
+            }
+
+            element.textContent += text[i];
+
+            if (i === text.length - 1) {
+                return;
+            }
+
+            setTimeout(() => textTypingEffect(element, text, i + 1), 50);
+        }
+
+        textTypingEffect(div, text);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

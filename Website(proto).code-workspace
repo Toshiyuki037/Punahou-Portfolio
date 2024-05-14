@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../Intro CS"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Intro CS"
+	}
+}
