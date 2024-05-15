@@ -1,0 +1,461 @@
+
+
+body {
+  overflow-x: hidden; /* Hide horizontal overflow */
+  overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* NAV BAR */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #0f1212;
+}
+li, a, button{
+    font-family:"Courier Prime";
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+header {
+    display: flex;
+    justify-content: space-between; /* Ensures the logo and nav are on opposite ends */
+    align-items: center;
+    padding: 30px 10%; /* Adjusted padding for visual balance */
+    background-color: #0f1212; /* Ensures consistent background color */
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto; /* Removed as we're using justify-content: space-between; */
+}
+
+.nav__links {
+    list-style-type: none;
+    margin: 0; /* Ensures that there is no default margin */
+    padding: 0; /* Ensures that there is no default padding */
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0 20px; /* Keeps spacing between links */
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+    color: white; /* Ensures text color is white */
+    text-decoration: none; /* Removes underline */
+}
+
+.nav__links li a:hover {
+    color: #672ae9; /* Adds a hover effect color change */
+}
+
+/* NAME TITLE */
+
+body{
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+    background:#0f1212;
+    /* overflow:hidden; */
+  }
+  .center {
+    position: absolute;
+    top: calc(50%); /* Moved down by 200 pixels */
+    left: 50%;
+    transform: perspective(1000px) translate(-50%, -50%) skewY(15deg);
+    transition: 0.5s;
+  }
+  
+  .center:hover {
+    transform: perspective(1000px) translate(-50%, -50%) skewY(0deg);
+  }
+  
+  .center h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%) scale(0.85); /* Scaled to 3/4 size */
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 12em; /* Adjust font size if necessary */
+    color: #fff;
+    transform-style: preserve-3d;
+    transition: 0.8s;
+  }
+  
+  .center h1 span:nth-child(1) {
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  }
+  
+  .center h1 span:nth-child(2) {
+    color: #5E17EB;
+    transform: translate(-50%, -50%) skewX(-60deg) scale(0.85);
+    left: -38px;
+    clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+  }
+  
+  .center h1 span:nth-child(3) {
+    transform: translate(-50%, -50%) skewY(0deg) scale(0.85);
+    left: -76px;
+    clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+  }
+  
+  .center:hover h1 span:nth-child(2),
+  .center:hover h1 span:nth-child(3) {
+    transform: translate(-50%, -50%) skewX(0deg) scale(0.85);
+    left: 0;
+    color: #fff;
+  }
+  
+  /* GALLERY */
+
+  body {
+    font-family: Arial, sans-serif;
+}
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 550px; /* Increased from 400px to 600px to add more space above the gallery */
+}
+
+.image-item img {
+  width: 100%;
+  max-width: 150px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.image-item img:hover {
+  transform: scale(1.1);
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* DESCRIPTION BOX */
+
+.text-box {
+  margin-top: 50px;  /* Adds space between the gallery and the text box */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);  /* Semi-transparent white background */
+  border-left: 5px solid #672ae9;  /* Artistic purple border on the left */
+  font-family: Arial, sans-serif;  /* Arial font */
+  color: white;  /* White text color */
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;  /* Ensures the text box is not too wide */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
+  border-radius: 10px;  /* Rounds the corners of the text box */
+}
+
+.text-box p {
+  margin: 0;
+}
+.content-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Keeps items aligned at the top */
+  margin-top: 50px; /* Keeps initial top margin */
+  gap: 100px; /* Increased gap between image and text content */
+  padding: 0 100px; /* Maintains 100px padding from left and right sides */
+}
+
+.image-box {
+  flex: 0 0 400px;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.text-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Ensures spacing between header and text box */
+}
+
+.header-design-process {
+  font-family: 'Courier Prime', sans-serif;
+  color: #E2E2E2;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center; /* Centers the header text horizontally */
+  margin-bottom: 25px; /* Additional spacing from header to text box if needed */
+}
+
+.text-box-right {
+  height: 200px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 5px solid #672ae9;
+  color: white;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.section-header h2 {
+  font-family: 'Courier Prime', sans-serif;
+  color: #E2E2E2; /* Light grey color for visibility */
+  font-size: 28px; /* Larger font size than the previous header */
+  text-transform: uppercase; /* Maintains style consistency */
+  letter-spacing: 1px; /* Spacing between letters for artistic effect */
+  text-align: center; /* Ensures the header is centered */
+  margin-bottom: 25px; /* Spacing before the text box starts */
+}
+
+.text-box {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 5px solid #672ae9;
+  font-family: Arial, sans-serif;
+  color: white;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: auto;
+  margin: 0 100px; /* Ensures 100px margin from left and right */
+  height: auto; /* Allows the box to adjust based on content */
+}
+
+.text-box ul {
+  list-style-type: none; /* Removes default list styling */
+  padding: 0;
+}
+
+.text-box li {
+  padding-left: 20px; /* Provides padding for bullet point */
+  text-indent: -20px; /* Aligns text nicely in the list */
+  margin-bottom: 10px; /* Space between list items */
+  position: relative; /* Allows for custom bullet points */
+}
+
+.text-box li:before {
+  content: "•"; /* Custom bullet point */
+  color: #672ae9; /* Bullet color */
+  font-size: 20px; /* Size of the bullet */
+  position: absolute;
+  left: 0;
+}
+
+::-webkit-meter-even-less-good-value
+
+.section-header h2 {
+  font-family: 'Courier Prime', sans-serif;
+  color: #E2E2E2; /* Light grey color for visibility */
+  font-size: 28px; /* Larger font size than the previous header */
+  text-transform: uppercase; /* Maintains style consistency */
+  letter-spacing: 1px; /* Spacing between letters for artistic effect */
+  text-align: center; /* Ensures the header is centered */
+  margin-bottom: 25px; /* Spacing before the text box starts */
+}
+
+/* General styles for all text boxes, apply only necessary common properties */
+/* Base styles for all text boxes */
+.text-box {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 5px solid #672ae9;
+  font-family: Arial, sans-serif;
+  color: white;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: auto;
+  width: auto;
+  max-width: 800px;  /* Adjust width as needed */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Specific margin adjustments for the first text box */
+.first-text-box {
+  margin-top: 50px; /* Ensures 50px gap from gallery */
+}
+
+/* Styling for the section containing the image and second text box */
+.content-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 100px;
+  padding: 0 100px; /* Ensures 100px padding from sides of the viewport */
+}
+
+/* Specific margin adjustments for the third text box */
+.third-text-box {
+  margin-top: 25px; /* Additional space above this text box */
+}
+
+.section-header {
+  text-align: center;
+  margin-top: 50px; /* Adjusted to ensure proper spacing from the content above */
+  margin-bottom: 50px; /* Ensures 50px gap above the textbox */
+}
+
+.section-header h2 {
+  font-size: 24px; /* You can adjust this size as needed */
+  color: #E2E2E2;
+  font-family: 'Courier Prime', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.content-row-with-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 75px; /* Padding from the sides of the viewport */
+  gap: 25px; /* Space between the text box and the image */
+}
+
+.fourth-text-box {
+  flex-grow: 1;
+  height: 200px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 5px solid #672ae9;
+  font-family: Arial, sans-serif;
+  color: white;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: auto;
+  margin-left: 75px; /* Ensures alignment and spacing from the left side */
+}
+
+.image-box-right {
+  flex: 0 0 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-right: 75px; /* Ensures alignment and spacing from the right side */
+}
+
+.image-box-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* WAVE ANIMATION */
+
+.title-container {
+  text-align: center; /* Center the title */
+  margin-top: 100px; /* Adjust as needed */
+}
+
+.wave-container {
+  position: relative; /* Use relative for natural document flow or absolute if it must be at the very bottom */
+  width: 100%;
+  margin-top: 100px; /* Space above the wave if needed */
+}
+
+svg#wave {
+  display: block;
+  width: 100%;
+  height: auto; /* Adjust height to maintain aspect ratio */
+  margin-top: 0px; /* Spacing from the content above to the wave */
+  position: relative;
+  bottom: 0;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensures the HTML and BODY tags take up the viewport height */
+  position: relative; /* Necessary for absolute positioning of the SVG */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.header-design-process, .section-header h2 {
+  font-family: 'Courier Prime', sans-serif;
+  color: #E2E2E2;
+  font-size: 29px; /* Increased from 24px */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold; /* Make text bold */
+  text-align: center;
+  margin-bottom: 25px;
+}

@@ -34,28 +34,38 @@ li, a, button{
     color: white;
     text-decoration: none;
 }
-header{
+header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between; /* Ensures the logo and nav are on opposite ends */
     align-items: center;
-    padding: 30px 10%;
+    padding: 30px 10%; /* Adjusted padding for visual balance */
+    background-color: #0f1212; /* Ensures consistent background color */
 }
-.logo{
+
+.logo {
     cursor: pointer;
-    margin-right: auto;
+    margin-right: auto; /* Removed as we're using justify-content: space-between; */
 }
-.nav__links{
+
+.nav__links {
     list-style-type: none;
+    margin: 0; /* Ensures that there is no default margin */
+    padding: 0; /* Ensures that there is no default padding */
 }
-.nav__links li{
+
+.nav__links li {
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0 20px; /* Keeps spacing between links */
 }
-.nav__links li a{
+
+.nav__links li a {
     transition: all 0.3s ease 0s;
+    color: white; /* Ensures text color is white */
+    text-decoration: none; /* Removes underline */
 }
-.nav__links li a:hover{
-    color: #672ae9;
+
+.nav__links li a:hover {
+    color: #672ae9; /* Adds a hover effect color change */
 }
 /*ßtart of intro effect*/
 
@@ -239,4 +249,10 @@ header{
     width: 440px;
     height: 260px;
     transform: scale(0.99);
+}
+
+#rights{
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
 }
